@@ -15,7 +15,7 @@ body{
     margin:0px auto;
     display: flex;
     flex-direction: column;
-    min-height: 100vh
+    min-height: 100vh;
 }
 
 header {
@@ -32,17 +32,27 @@ header {
 
 nav {
     display: flex;
-    gap: 1rem;
     padding-right: 3rem;
+
+}
+
+nav a:first-child{
+    border-left: 1px solid  var(--color1);
 }
 
 nav a {
     text-decoration: none;
     color: var(--color1);
+    border-right: 1px solid  var(--color1);
+    padding: 2rem 1rem;
+    width: 8rem;
+    /* flex: 1 0 8rem;  --why does this not work */
+    text-align: center;    
 }
 
 nav a:hover {
-    color:rgb(54, 12, 5);
+    color:var(--color2);
+    background-color: var(--color1);
 }
 
 main {
@@ -52,6 +62,8 @@ main {
     border-left: 1px solid var(--color1);
     border-right: 1px solid var(--color1);
     max-width: 80rem;
+    /*background-color: var(--color1); why doesnt this work */
+    /* border-bottom: 1px solid var(--color1) */
     
 }
 
@@ -66,20 +78,19 @@ article {
     max-width: 80rem;
     padding: 1rem 0;
     flex: 1 1 60rem;
-}
 
-article h1,p {
-    padding: 0 3rem;
 }
 
 article h1 {
     margin: 1rem;
     font-style: italic;
     font-size: 2rem;
+    padding: 0 3rem;
 }
 
 article p {
     margin: .75rem;
+    padding: 0 3rem;
 }
 
 ul {
@@ -132,4 +143,10 @@ footer{
     padding: 2rem;
     text-align: center;
     border-top: 1px solid var(--color1);
+    background-color: var(--color2);
+}
+
+.wrapper {
+    border-bottom: 1px solid var(--color1);
+    background-color: var(--color2);
 }
